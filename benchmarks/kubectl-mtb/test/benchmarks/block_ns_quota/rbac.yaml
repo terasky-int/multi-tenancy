@@ -1,0 +1,25 @@
+# Create a Role with No Permissions for Quota
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  namespace: a1
+  name: no-quota-permissions
+rules:
+- apiGroups: [""] # "" indicates the core API group
+  resources: ["quota"]
+  verbs: [] # No verbs specified means no permissions
+---
+
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: bind-no-quota-permissions
+  namespace: a1
+subjects:
+- kind: User # or "Group" if binding to a group
+  name: tenant-a # replace with the actual user or group name
+  apiGroup: rbac.authorization.k8s.io
+roleRef:
+  kind: Role
+  name: no-quota-permissions
+  apiGroup: rbac.authorization.k8s.io
