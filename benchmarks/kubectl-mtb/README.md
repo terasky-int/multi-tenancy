@@ -126,7 +126,7 @@ You can refer [here](https://github.com/open-policy-agent/gatekeeper#how-to-use-
 For conformance with benchmarks like `Configure namespace resource quotas`, the namespace will also need a ResourceQuota object. To create the quota, run the following command:
 
 ```console
-kubectl apply -f https://raw.githubusercontent.com/kubernetes-sigs/multi-tenancy/master/benchmarks/kubectl-mtb/test/quotas/ns_quota.yaml
+kubectl -n test apply -f https://raw.githubusercontent.com/kubernetes-sigs/multi-tenancy/master/benchmarks/kubectl-mtb/test/quotas/ns_quota.yaml
 ```
 
 After applying the policies and ResourceQuota object, run the benchmarks again. All benchmarks should pass.
