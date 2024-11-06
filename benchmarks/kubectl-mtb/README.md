@@ -98,7 +98,7 @@ You can use a policy engine like [Kyverno](https://github.com/nirmata/kyverno) o
 To install Kyverno, you can run the following command:
 
 ```console
-kubectl create -f https://github.com/nirmata/kyverno/raw/master/definitions/install.yaml
+kubectl create -f https://github.com/kyverno/kyverno/releases/download/v1.11.1/install.yaml
 ```
 
 To apply all the Kyverno policies after installing, you can use the following command:
