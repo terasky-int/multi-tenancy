@@ -20,7 +20,7 @@ kubectl-mtb can be installed by cloning and building this repository:
 
 ```bash
 git clone https://github.com/kubernetes-sigs/multi-tenancy
-cd benchmarks/kubectl-mtb
+cd multi-tenancy/benchmarks/kubectl-mtb/
 make kubectl-mtb
 ```
 
