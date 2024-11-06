@@ -21,7 +21,9 @@ kubectl-mtb can be installed by cloning and building this repository:
 ```bash
 git clone https://github.com/kubernetes-sigs/multi-tenancy
 cd multi-tenancy/benchmarks/kubectl-mtb/
+mkdir -p ~/go/bin
 make kubectl-mtb
+sudo cp ~/go/bin/kubectl-mtb /usr/local/bin/
 ```
 
 The `kubectl-mtb` binary will be copied to your $GOPATH/bin directory.
